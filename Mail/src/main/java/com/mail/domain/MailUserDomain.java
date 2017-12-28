@@ -1,12 +1,13 @@
 package com.mail.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MailUserDomain {
 	private int muid;
 	private String userName;
 	private String password;
-	private List<MailDomain>mails;
+	private List<MailDomain>mails=new ArrayList<MailDomain>();
 
 	
 	public int getMuid() {

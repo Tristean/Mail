@@ -6,7 +6,7 @@
     <class name="com.mail.domain.MailUserDomain" table="MAILUSERDOMAIN">
         <id name="muid" type="int">
             <column name="MUID" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="userName" type="java.lang.String">
             <column name="USERNAME" />
@@ -14,10 +14,8 @@
         <property name="password" type="java.lang.String">
             <column name="PASSWORD" />
         </property>
-        <list name="mails" inverse="false" table="MAILDOMAIN" lazy="true">
-            <key>
-                <column name="MUID" />
-            </key>
+        <list name="mails" inverse="true" cascade="all">
+            <key column="USER_ID"></key>
             <list-index></list-index>
             <one-to-many class="com.mail.domain.MailDomain" />
         </list>

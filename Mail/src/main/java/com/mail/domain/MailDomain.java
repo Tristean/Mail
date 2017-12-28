@@ -6,7 +6,6 @@ public class MailDomain {
 	private MailUserDomain user;
 	
 	private String content;
-
 	public int getMid() {
 		return mid;
 	}
@@ -27,6 +26,4 @@ public class MailDomain {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	
-	
 }

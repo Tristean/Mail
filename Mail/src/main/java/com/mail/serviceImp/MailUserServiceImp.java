@@ -1,5 +1,7 @@
 package com.mail.serviceImp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,21 +20,16 @@ public class MailUserServiceImp implements MailUserService {
 	}
 
 	@Override
-	public boolean delete(int muid) {
+	public boolean delete(int mid) {
 		// TODO Auto-generated method stub
-		return false;
+		return mailuserdao.delete(mid);
 	}
 
-	@Override
-	public boolean selectAll() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 	@Override
-	public boolean selectById(int id) {
+	public List selectById(int id) {
 		// TODO Auto-generated method stub
-		return false;
+		return mailuserdao.selectById(id);
 	}
 
 	@Override

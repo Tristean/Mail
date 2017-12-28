@@ -1,15 +1,16 @@
 package com.mail.dao;
 
+import java.util.List;
+
 import com.mail.domain.MailUserDomain;
 
 public interface MailUserDao {
 	public boolean add(MailUserDomain user);
 	
-	public boolean delete(int muid);
+	public boolean delete(int mid);
 	
-	public boolean selectAll();
 	
-	public boolean selectById(int id);
+	public List selectById(int id);
 	
 	public boolean update(int id);
 }
