@@ -1,16 +1,10 @@
 package com.mail.dao;
 
-import java.util.List;
+import org.springframework.stereotype.Service;
 
+import com.mail.dao.basedao.MailBaseDao;
 import com.mail.domain.MailUserDomain;
 
-public interface MailUserDao {
-	public boolean add(MailUserDomain user);
-	
-	public boolean delete(int mid);
-	
-	
-	public List selectById(int id);
-	
-	public boolean update(int id);
+public interface MailUserDao extends MailBaseDao<MailUserDomain> {
+
 }

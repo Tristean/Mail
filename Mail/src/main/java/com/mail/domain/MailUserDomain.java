@@ -7,38 +7,52 @@ public class MailUserDomain {
 	private int muid;
 	private String userName;
 	private String password;
-	private List<MailDomain>mails=new ArrayList<MailDomain>();
-
+	private int age;
+	private String sex;
+	private String phoneNumber;
+	private User user;
 	
+	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	public int getMuid() {
 		return muid;
 	}
 	public void setMuid(int muid) {
 		this.muid = muid;
 	}
-
-	
 	public String getUserName() {
 		return userName;
 	}
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-
-	
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	
-	public List<MailDomain> getMails() {
-		return mails;
+	public int getAge() {
+		return age;
 	}
-	public void setMails(List<MailDomain> mails) {
-		this.mails = mails;
+	public void setAge(int age) {
+		this.age = age;
 	}
-	
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 }

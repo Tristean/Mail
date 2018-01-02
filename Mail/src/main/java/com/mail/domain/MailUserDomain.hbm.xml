@@ -1,23 +1,28 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2017-12-25 22:07:10 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2017-12-31 22:26:35 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="com.mail.domain.MailUserDomain" table="MAILUSERDOMAIN">
         <id name="muid" type="int">
             <column name="MUID" />
             <generator class="native" />
         </id>
+        <one-to-one name="user" class="com.mail.domain.User"></one-to-one>
         <property name="userName" type="java.lang.String">
             <column name="USERNAME" />
         </property>
         <property name="password" type="java.lang.String">
             <column name="PASSWORD" />
         </property>
-        <list name="mails" inverse="true" cascade="all">
-            <key column="USER_ID"></key>
-            <list-index></list-index>
-            <one-to-many class="com.mail.domain.MailDomain" />
-        </list>
+        <property name="age" type="int">
+            <column name="AGE" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+        <property name="phoneNumber" type="java.lang.String">
+            <column name="PHONENUMBER" />
+        </property>
     </class>
 </hibernate-mapping>

@@ -11,6 +11,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 		
 	<context:component-scan base-package="com.mail"></context:component-scan>
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>  
 	<context:property-placeholder location="classpath:jdbc.properties"/>
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="${jdbc.driverClass}"/>
@@ -40,11 +41,10 @@
    			<tx:method name="*"/>
    		</tx:attributes>
    	</tx:advice>
+   	<tx:annotation-driven transaction-manager="transactionManager"/>
    	
    	<aop:config>
    		<aop:pointcut expression="execution(* com.mail.dao.*.*(..)))" id="txPointcut"/>
    	 	<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
    	</aop:config>
-   	
-   	
 </beans>
