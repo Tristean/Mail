@@ -1,14 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2017-12-31 22:26:35 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2018-1-3 10:17:22 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="com.mail.domain.MailUserDomain" table="MAILUSERDOMAIN">
         <id name="muid" type="int">
             <column name="MUID" />
             <generator class="native" />
         </id>
-        <one-to-one name="user" class="com.mail.domain.User"></one-to-one>
         <property name="userName" type="java.lang.String">
             <column name="USERNAME" />
         </property>

@@ -1,5 +1,8 @@
 package com.mail.domain;
 
+import javax.persistence.Entity;
+
+@Entity
 public class User {
 	private String username;
 	private String pwdHash;
@@ -8,8 +11,15 @@ public class User {
 	private String forwardDestinationn;
 	private String useAlias;
 	private String aias;
+	private MailUserDomain mailuserdomain;
 	
 	
+	public MailUserDomain getMailuserdomain() {
+		return mailuserdomain;
+	}
+	public void setMailuserdomain(MailUserDomain mailuserdomain) {
+		this.mailuserdomain = mailuserdomain;
+	}
 	public String getUsername() {
 		return username;
 	}

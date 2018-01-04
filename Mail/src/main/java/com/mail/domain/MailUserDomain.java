@@ -10,15 +10,8 @@ public class MailUserDomain {
 	private int age;
 	private String sex;
 	private String phoneNumber;
-	private User user;
 	
 	
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
 	public int getMuid() {
 		return muid;
 	}
