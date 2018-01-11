@@ -5,27 +5,27 @@
 <hibernate-mapping>
     <class name="com.mail.domain.User" table="users">
         <id name="username" type="java.lang.String">
-            <column name="USERNAME" />
+            <column name="username" />
             <generator class="assigned" />
         </id>
         <property name="pwdHash" type="java.lang.String">
-            <column name="PWDHASH" />
+            <column name="pwdHash" />
         </property>
         <property name="pwdAlgorithm" type="java.lang.String">
-            <column name="PWDALGORITHM" />
+            <column name="pwdAlgorithm" />
         </property>
-        <property name="useForwarding" type="java.lang.String">
-            <column name="USEFORWARDING" />
+        <property name="useForwarding" type="int">
+            <column name="useForwarding" />
         </property>
-        <property name="forwardDestinationn" type="java.lang.String">
-            <column name="FORWARDDESTINATIONN" />
+        <property name="forwardDestination" type="java.lang.String">
+            <column name="forwardDestination" />
         </property>
-        <property name="useAlias" type="java.lang.String">
-            <column name="USEALIAS" />
+        <property name="useAlias" type="int">
+            <column name="useAlias" />
         </property>
-        <property name="aias" type="java.lang.String">
-            <column name="AIAS" />
+        <property name="alias" type="java.lang.String">
+            <column name="alias" />
         </property>
-        <one-to-one name="mailuserdomain" class="com.mail.domain.MailUserDomain" cascade="all"></one-to-one>
+        <one-to-one name="mailuserdomain" class="com.mail.domain.MailUserDomain" cascade="all"/>
     </class>
 </hibernate-mapping>

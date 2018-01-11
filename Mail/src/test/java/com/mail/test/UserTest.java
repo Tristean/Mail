@@ -21,9 +21,8 @@ public class UserTest {
 	public void test() throws Exception{
 		RegistryUser registryUser=new RegistryUser();
 		
-		registryUser.setRid(0);
-		registryUser.setName("Fobby");
-		registryUser.setPassword("123000");
+		registryUser.setName("buddy");
+		registryUser.setPassword("buddy123");
 		registryUser.setAge(11);
 		registryUser.setPhoneNumber("1222");
 		registryUser.setSex("male");

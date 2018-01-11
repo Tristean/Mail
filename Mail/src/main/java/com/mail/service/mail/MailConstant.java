@@ -21,5 +21,5 @@ public class MailConstant {
 	
 	public static final int MAXRESULT=10;
 	public static final int PAGE_COUNT=8;
-	public static final String EMAIL_CONFIG_PATH="Mail/src/main/resources/mail.properties";
+	public static final String EMAIL_CONFIG_PATH="mail.properties";
 }

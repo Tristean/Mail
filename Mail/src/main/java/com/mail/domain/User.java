@@ -6,11 +6,11 @@ import javax.persistence.Entity;
 public class User {
 	private String username;
 	private String pwdHash;
-	private String pwdAlgorithm;
-	private String useForwarding;
-	private String forwardDestinationn;
-	private String useAlias;
-	private String aias;
+	private String pwdAlgorithm="SHA";
+	private int useForwarding=0;
+	private String forwardDestination;
+	private int useAlias=0;
+	private String alias;
 	private MailUserDomain mailuserdomain;
 	
 	
@@ -38,29 +38,29 @@ public class User {
 	public void setPwdAlgorithm(String pwdAlgorithm) {
 		this.pwdAlgorithm = pwdAlgorithm;
 	}
-	public String getUseForwarding() {
+	public int getUseForwarding() {
 		return useForwarding;
 	}
-	public void setUseForwarding(String useForwarding) {
+	public void setUseForwarding(int useForwarding) {
 		this.useForwarding = useForwarding;
 	}
-	public String getForwardDestinationn() {
-		return forwardDestinationn;
+	public String getForwardDestination() {
+		return forwardDestination;
 	}
-	public void setForwardDestinationn(String forwardDestinationn) {
-		this.forwardDestinationn = forwardDestinationn;
+	public void setForwardDestination(String forwardDestination) {
+		this.forwardDestination = forwardDestination;
 	}
-	public String getUseAlias() {
+	public int getUseAlias() {
 		return useAlias;
 	}
-	public void setUseAlias(String useAlias) {
+	public void setUseAlias(int useAlias) {
 		this.useAlias = useAlias;
 	}
-	public String getAias() {
-		return aias;
+	public String getAlias() {
+		return alias;
 	}
-	public void setAias(String aias) {
-		this.aias = aias;
+	public void setAlias(String alias) {
+		this.alias = alias;
 	}
 	
 	
